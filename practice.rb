@@ -245,3 +245,182 @@
 
 
 # p contains_duplicate([2,3,1,3])
+
+#Write a function that takes in an array of numbers and returns a new array of the same numbers without any duplicates.
+
+
+#write a function that takes in an array
+#write the array with array.unique!
+#boom
+
+# def unique_numbers(array)
+#   p array.uniq
+# end
+
+# unique_numbers([1,2,3,4,4,4])
+
+#Write a function that takes in an array of numbers and returns the largest product of any two numbers in the array.
+
+#iterate through array 
+#find the two largest numbers
+#multiply those numbers
+
+
+# def largest_product(array)
+#   new_array = []
+  
+#   2.times do
+#     largest_number = array.max
+#     p largest_number
+#     new_array << array.slice(largest_number)
+#   end 
+#   sum = new_array.inject(:*)
+#   p sum
+# end
+
+# largest_product([3,2,4,4])
+
+# def product_except_self(nums)
+#   sum = []
+#   nums.length.times do
+#     n = nums.slice!(0)
+#     sum << nums.inject(:*)
+#     nums << n 
+#   end
+#   return sum
+# end
+
+# product_except_self([-1,1,0,-3,3])
+
+# [3,4,5,1,2]
+
+# def find_min(nums)
+#   return nums.min 
+# end
+
+# p  find_min([3,4,5,1,2])
+
+# Input: nums = [2,3,-2,4]
+# Output: 6
+# Explanation: [2,3] has the largest product 6.
+# Example 2:
+
+# Input: nums = [-2,0,-1]
+# Output: 0
+# Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+
+
+# def max_product(nums)
+#   max = 0
+#   i = 0 
+#   (nums.size-1).times do
+#     product = nums[i] * (nums[i + 1])
+#     if product > max 
+#       max = product
+#     end 
+#   end
+#   p max
+# end
+
+# max_product([2,3,-2,4])
+
+# def most_words(array)
+#   count = 0
+#   array.each do |n|
+#     if array.count(n) > count
+#       count = array.count(n)
+#       @biggest_word = n
+#     end
+#   end 
+#   p @biggest_word
+# end
+
+# most_words(["hello","you","hello", "what", "yup","you","you"])
+
+#5.  Write a function that takes in an array of numbers and returns all the pairs that add up to 10.
+
+# array = [2,3,4,5,6,5,7]
+# return = [[6,4],[7,3],[5,5]]
+
+#iterate through array
+#subtract num from 10
+#create loop with map index
+  #if result is in array
+  #shovel num and result into new array
+  #delete number at index
+#put that in another array
+# p array
+
+# def return_pairs_of_ten(array)
+#   new_array = []
+#   for num in array do
+#     difference = (10 - num)
+#     p difference
+#     array.each_with_index do |n,i|
+#       if n == difference
+#         new_array << [num,difference]
+#         array.delete_at(i)
+#       end
+#     end
+    
+#   end
+#   p new_array
+  
+# end
+
+# return_pairs_of_ten([2,3,4,5,6,5,7])
+
+# Input: nums = [-1,0,1,2,-1,-4]
+# Output: [[-1,-1,2],[-1,0,1]]
+
+# def three_sum(nums)
+#   nums.combination(3).select {|triplet| triplet.sum.zero?}.map(&:sort).uniq
+# end
+
+
+# def three_sum(nums)
+#   nums.combination(3).select {|triplet| triplet.sum.zero?}.map(&:sort).uniq
+# end
+
+
+# p three_sum([-1,0,1,2,-1,-4])
+
+
+# Output: 49
+
+#compare each pair of numbers
+#take the largest of those two numbers
+#find the distance between those two numbers in the array
+#multiply the distance and lowest of the two numbers
+#return largest number
+
+
+# def max_area(height)
+#   max = 0
+#   loop do
+#     i = 1
+#     length = height.length - 1
+#     length.times do
+#       least = [height[0],height[i]].min
+#       product = least * i
+#       if product > max
+#         max = product
+#       end
+#       i += 1
+#     end
+#     height.shift
+#     if height.empty?
+#       return max
+#     end
+#   end
+# end
+
+# p max_area([1,8,6,2,5,4,8,3,7])
+
+<p>I am a software engineer proficient in:</p>
+<p>Back-End Development - Rails</p>
+<p>Database Design - Postgres, SQL</p>
+<p>Front-End Development - HTML, CSS, JavaScript, Vue.js</p>
+<p>Computer Science - Data structures,
+algorithms</p>
+<p>Version Control - Git, Github</p>
